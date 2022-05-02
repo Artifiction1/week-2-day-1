@@ -32,6 +32,7 @@ h1 {text-align: center;}
   #three:hover #work_three {display:inline; height:300px; width:300px; position: absolute; top: 0; left:-500px; right: 0; bottom: 0;}
     #picture {text-align: center;}
   #personal {text-align:center;}
+  #info {display: none;}
   #me {text-align: center; margin-left: 37%; width: 500px;}
   #background-1 {opacity: 0;
     height: 100%;
@@ -44,8 +45,14 @@ color: linear-gradient(to left, red , white);}
   #hower:hover #fly {transform: translate(-800px);
     transform: translateY(+500px);
     transition: 8s;}
-    #school p {background-color: black;}
-    #work p {background-color: black;}
+    .pictures {width: 515px; height: 634; overflow: hidden; text-align: center; position:absolute; left: 455.5px; top: -4.6px;}
+    .pictures-right {width: 515px; height: 634; overflow: hidden; text-align: center; position:absolute; right: 300.5px; top: -4.6px;}
+    #school p {text-align: center; position:absolute; left:150px}
+    #work p {text-align: center; position:absolute;}
+    .icon:single-button .pictures {overflow:visible;}
+    .icon:checked .pictures-right {overflow:visible;}
+    #colors {position: fixed; top:10px; left: 10px; background-color: white; width: 100px; height: 100px;}
+    #colors-2 {position: fixed; top:10px; right: 10px; background-color: white; width: 100px; height: 100px;}
   </style>
 
 </head>
@@ -61,9 +68,9 @@ color: linear-gradient(to left, red , white);}
 
     <div><h3>28.vsk</h3></div>
     
-    <div id="newschool"><p class="icon">28.</p>
+    <div id="newschool"><div class="icon">28.</div>
 
-    <div id="first"><img src="28_vid.jpg" height="300" width="300"><p> This was my primary school where I studied till I finish 4th grade</p> </div>
+    <div id="first"><div class="pictures"><img src="28_vid.jpg" height="634" width="auto"></div><p> This was my primary school where I studied till I finish 4th grade</p> </div>
     </div>
     <!-- school 1 -->
     
@@ -71,7 +78,7 @@ color: linear-gradient(to left, red , white);}
 
     <div id="junior"><img class="icon" src="rtdp.png">
 
-    <div id="RTDP"><img src="school.jpg" height="300" width="300"> <p>I transfered do to family moving, and finished my elementary school here. School was based around art, so I managed ot learn how to work with my hands.</p></div>
+    <div id="RTDP"><div class="pictures"><img src="school.jpg" height="634" width="auto"> </div> <p>I transfered do to family moving, and finished my elementary school here. School was based around art, so I managed ot learn how to work with my hands.</p></div>
 </div>
     <!-- school 2 -->
 
@@ -79,7 +86,7 @@ color: linear-gradient(to left, red , white);}
 
     <div id="uni"><img class="icon" src="RTU_logo.png">
 
-    <div id="RTU"><img src="RTU.jpg" height="300" width="500"> <p>I attended This university for a year and gained some basic programming knowledge</p></div> 
+    <div id="RTU"><div class="pictures"><img  src="RTU.jpg" height="634"> </div> <p>I attended This university for a year and gained some basic programming knowledge</p></div> 
     </div>
     
     <!-- school 3-->
@@ -90,7 +97,7 @@ color: linear-gradient(to left, red , white);}
     <div><h3>maxima</h3></div>
 
     <div id="one">
-        <div id="work_one"><p>his wsa my first workplace after finishing highschool. Working here I learned how to work in a team, interact with customers and deal with their complaints.</p><img src="maxima.jpg" height="300" width="300"></div>
+        <div id="work_one"><p>his wsa my first workplace after finishing highschool. Working here I learned how to work in a team, interact with customers and deal with their complaints.</p><div class="pictures-right"><img src="maxima.jpg" height="634" width="auto"></div></div>
         <img class="icon" src="maxima.png">
 
     
@@ -99,7 +106,7 @@ color: linear-gradient(to left, red , white);}
 
     <div><h3>forum cinemas</h3></div>
 
-    <div id="two"><div id="work_two"><p>I worked and saw how a larger company works. I saw their marketing strategies, work management and their work process.</p><img src="Kino-Citadele.jpg" height="300" width="500"></div>
+    <div id="two"><div id="work_two"><p>I worked and saw how a larger company works. I saw their marketing strategies, work management and their work process.</p><div class="pictures-right"><img src="Kino-Citadele.jpg" height="634" width="auto"></div></div>
 
         <img class="icon" src="forum.png">
 
@@ -110,16 +117,16 @@ color: linear-gradient(to left, red , white);}
     <DIV><h3>riga hospital Nr1</h3></DIV>
 
     <div id="three">
-        <div id="work_three"><p>I worked here, because once I thought of going into medicine, but after working there, I realised it was not for me. I did learn how to be more serious about my work and how to really work hard.</p> <img src="1st.jpg" height="300" width="400"></div>
-<p class="icon">Nr.1</p>
+        <div id="work_three"><p>I worked here, because once I thought of going into medicine, but after working there, I realised it was not for me. I did learn how to be more serious about my work and how to really work hard.</p> <div class="pictures-right"><img src="1st.jpg" height="634" width="auto"></div></div>
+<div class="icon">Nr.1</div>
 
     </div>
     <!-- work 3 -->
     
 </div>
-    <div id="personal"><h2> personal information</h2>
-    <p id="me"> My names is Agris Engelis. I am 27 years old. I have finished highschool and currently I'm studying epicode course. While my current coding skills are lacking, I do try to keep with the class and hopefully I'm getting better at programming. From my past work experiences I have learned to work and communicate with collegues and customers. My current skill are lacking, but in time I expect them to grow. </p></div>
-    <div id="picture" ><img src="me.jpg"></div>
+    <div id="personal"><h2 id="head-2"> personal information</h2>
+    <p id="me"> My names is Agris Engelis. I am 27 years old. I have finished highschool and currently I'm studying epicode course. While my current coding skills are lacking, I do try to keep with the class and hopefully I'm getting better at programming. From my past work experiences I have learned to work and communicate with collegues and customers. My current skill are lacking, but in time I expect them to grow. </p>
+    <div id="picture" ><img src="me.jpg"></div> 
 
     
         <div id="progams"> <h3>programs I'm currently studying</h3>
@@ -128,6 +135,32 @@ color: linear-gradient(to left, red , white);}
     </div>
     <div id="hower">fly
     <div id="fly"><img src="fly.png"height=20px width="40px"></div>
+    </div>
+    <div id="colors">
+    <button type="button" onclick="overflow();">overflow</button>
+    <script>
+        function overflow() {
+            document.getElementById("colors").style.backgroundColor="red";
+
+        }
+    </script>
+    </div>
+    <div id="colors-2">
+        <button type="button" onclick="rainbow();">rainbow</button>
+        <script>
+            var colors = ["red", "blue", "green"];
+    var colorIndex = 0;
+    function rainbow() {
+        var col = document.getElementById("colors-2");
+        if( colorIndex >= colors.length ) {
+            colorIndex = 0;
+        }
+        col.style.backgroundColor = colors[colorIndex];
+        colorIndex++;
+    }
+        </script>
+
+        
     </div>
 </body>
 
